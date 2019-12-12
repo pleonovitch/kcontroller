@@ -23,32 +23,32 @@ import (
 // +genclient
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
-// GCPServiceAccount is a specification for a GCPServiceAccount resource
-type GCPServiceAccount struct {
+// Foo is a specification for a Foo resource
+type Foo struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
 
-	Spec   GCPServiceAccountSpec   `json:"spec"`
-	Status GCPServiceAccountStatus `json:"status"`
+	Spec   FooSpec   `json:"spec"`
+	Status FooStatus `json:"status"`
 }
 
-// GCPServiceAccountSpec is the spec for a GCPServiceAccount resource
-type GCPServiceAccountSpec struct {
+// FooSpec is the spec for a Foo resource
+type FooSpec struct {
 	DeploymentName string `json:"deploymentName"`
 	Replicas       *int32 `json:"replicas"`
 }
 
-// GCPServiceAccountStatus is the status for a GCPServiceAccount resource
-type GCPServiceAccountStatus struct {
+// FooStatus is the status for a Foo resource
+type FooStatus struct {
 	AvailableReplicas int32 `json:"availableReplicas"`
 }
 
 // +k8s:deepcopy-gen:interfaces=k8s.io/apimachinery/pkg/runtime.Object
 
-// GCPServiceAccountList is a list of GCPServiceAccount resources
-type GCPServiceAccountList struct {
+// FooList is a list of Foo resources
+type FooList struct {
 	metav1.TypeMeta `json:",inline"`
 	metav1.ListMeta `json:"metadata"`
 
-	Items []GCPServiceAccount `json:"items"`
+	Items []Foo `json:"items"`
 }
