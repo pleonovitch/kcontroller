@@ -21,7 +21,7 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 
-	samplecontroller "github.com/pleonovitch/kcontroller/pkg/apis/samplecontroller"  "k8s.io/sample-controller/pkg/apis/samplecontroller"
+	samplecontroller "github.com/pleonovitch/kcontroller/sample-controller/pkg/apis/samplecontroller/v1alpha1"
 )
 
 // SchemeGroupVersion is group version used to register these objects
